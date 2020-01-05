@@ -1,0 +1,12 @@
+<div class="container" *ngFor="let product of products; let i=index" [style.margin-bottom]="'15px'">
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="row">{{product.name}}</div>
+            <div class="row">---</div>
+            <div class="row">{{product.price_formatted}}</div>
+            <div class="row">---</div>
+            <div class="row"><button mat-raised-button (click)="showDetail(product)">Detail</button></div>
+        </div>
+        <div class="col-sm-7"><img src="{{product.picture.url}}" width="200" height="200"></div>
+    </div>
+</div>
