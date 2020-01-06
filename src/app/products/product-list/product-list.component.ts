@@ -20,9 +20,7 @@ export class ProductListComponent implements OnInit {
 
   showDetail(product) {
     let id = product.id;
-    // this.productService.getProduct(id).subscribe((data)=> {
-      
-    // });
+    localStorage.setItem('selectedProduct', JSON.stringify(product));    
     this.productService.setProductDetail(product);
     this.router.navigate(['/products', id]);
   }

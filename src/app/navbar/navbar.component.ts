@@ -20,8 +20,7 @@ export class NavbarComponent implements OnInit {
   }
 
   onLogin(email, password){
-    this.usersService.loginUser(email, password).subscribe((data)=> {
-      console.log(data);
+    this.usersService.loginUser(email, password).subscribe((data)=> {      
       localStorage.setItem('userToken', data.authorization);
       this.isLogged = true;
     },
